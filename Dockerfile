@@ -1,5 +1,5 @@
 FROM node:latest
-RUN npm install -g yarn
+#RUN npm install -g yarn
 RUN mkdir /proxy-server
 WORKDIR /proxy-server
 RUN yarn add puppeteer -y
