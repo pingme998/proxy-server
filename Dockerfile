@@ -5,8 +5,9 @@ RUN apt install nodejs -y
 #npm install --global yarn
 RUN apt install wget -y
 RUN apt remove cmdtest -y
-RUN wget -qO - https://dl.yarnpkg.com/debian/pubkey.gpg |apt-key add -
-RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
+RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+sudo apt-get update
 RUN apt-get update -y
 RUN apt-get install yarn -y
 #RUN apt install npm -y
