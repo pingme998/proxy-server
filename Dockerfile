@@ -4,7 +4,8 @@ RUN npm install -g npm@7.17.0
 RUN mkdir /proxy-server
 WORKDIR /proxy-server
 RUN npm i absolutify
-RUN npm i puppeteer
+RUN npm i express
+RUN yarn add express puppeteer
 COPY server.js /proxy-server/server.js
 COPY package.json /proxy-server/package.json
 COPY pro.sh /pro.sh
