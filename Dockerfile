@@ -1,4 +1,5 @@
 FROM node:latest
+RUN npm install -g npm@7.17.0
 #RUN npm install -g 
 RUN mkdir /proxy-server
 WORKDIR /proxy-server
