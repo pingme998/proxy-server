@@ -1,4 +1,4 @@
-FROM node:6.7.0
+FROM node:latest
 RUN npm install -g yarn
 RUN mkdir /proxy-server
 WORKDIR /proxy-server
