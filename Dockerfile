@@ -3,7 +3,7 @@ FROM node:latest
 RUN mkdir /proxy-server
 WORKDIR /proxy-server
 RUN npm i absolutify
-RUN yarn add express puppeteer -y
+RUN npm i puppeteer
 COPY server.js /proxy-server/server.js
 COPY package.json /proxy-server/package.json
 COPY pro.sh /pro.sh
